@@ -3,6 +3,7 @@
 import './globals.css';
 import { useState } from 'react';
 import { translations } from './i18n';
+import { LanguageContext } from './LanguageContext';
 
 export default function RootLayout({
   children,
@@ -13,34 +14,27 @@ export default function RootLayout({
   const [lang, setLang] = useState<'en'|'hi'>('hi');
 
   return (
-    <html lang={lang}>
-      <body className="bg-white text-gray-900">
+    <LanguageContext.Provider value={{lang, setLang}}>
+      <html lang={lang}>
+        <body className="bg-white text-gray-900">
 
-        <header className="p-4 shadow-md flex justify-between">
-          <h1 className="text-xl font-bold">
-            {translations[lang].title}
-          </h1>
+          <header className="p-4 flex justify-between shadow-md">
 
-          <div className="space-x-2">
-            <button onClick={()=>setLang('en')}
-              className="border px-2 py-1 rounded">
-              English
-            </button>
+            <h1 className="text-xl font-bold">
+              {translations[lang].title}
+            </h1>
 
-            <button onClick={()=>setLang('hi')}
-              className="border px-2 py-1 rounded">
-              हिंदी
-            </button>
-          </div>
-        </header>
+            <div className="space-x-2">
+              <button onClick={()=>setLang('en')}>English</button>
+              <button onClick={()=>setLang('hi')}>हिंदी</button>
+            </div>
 
-        {children}
+          </header>
 
-        <footer className="p-4 mt-10 text-center text-sm text-gray-600">
-          {translations[lang].contact}: scholarshipjeengar@gmail.com
-        </footer>
+          {children}
 
-      </body>
-    </html>
+        </body>
+      </html>
+    </LanguageContext.Provider>
   );
 }

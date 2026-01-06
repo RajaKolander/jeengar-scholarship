@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext } from 'react';
+import { LanguageContext } from './LanguageContext';
 import { translations } from './i18n';
 
 export default function HomePage() {
 
-  const [lang] = useState<'en'|'hi'>('hi');
+  const { lang } = useContext(LanguageContext);
 
   return (
     <main className="p-6 max-w-6xl mx-auto">
@@ -32,7 +33,9 @@ export default function HomePage() {
             {translations[lang].about}
           </h2>
           <p className="text-sm mt-2">
-            Annual scholarship for classes 10th and 12th
+            {lang==='en'
+              ? "Annual scholarship for classes 10th and 12th"
+              : "कक्षा 10वीं एवं 12वीं के मेधावी छात्रों हेतु वार्षिक छात्रवृति"}
           </p>
         </div>
 
@@ -41,7 +44,9 @@ export default function HomePage() {
             {translations[lang].process}
           </h2>
           <p className="text-sm mt-2">
-            Merit based transparent selection
+            {lang==='en'
+              ? "Merit based transparent selection"
+              : "पूरी तरह पारदर्शी मेरिट आधारित चयन"}
           </p>
         </div>
 
@@ -50,7 +55,7 @@ export default function HomePage() {
             {translations[lang].events}
           </h2>
           <p className="text-sm mt-2">
-            Last event held in Indore - 2025
+            {translations[lang].title} – Indore 2025
           </p>
         </div>
 
