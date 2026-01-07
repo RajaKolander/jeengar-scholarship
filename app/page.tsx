@@ -51,8 +51,8 @@ export default function HomePage() {
           <h2 className="text-lg font-semibold">{translations[lang].events}</h2>
           <p className="text-sm mt-2">
             {lang==='en'
-              ? "Last event held in Indore - 2025."
-              : "नवीनतम आयोजन: इंदौर - 2025।"}
+              ? "Last event held in Bhopal - 2025."
+              : "नवीनतम आयोजन: भोपाल - 2025।"}
           </p>
         </div>
       </section>
