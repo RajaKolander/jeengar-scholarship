@@ -6,6 +6,7 @@ import { translations } from './i18n';
 import Link from 'next/link';
 
 export default function HomePage() {
+
   const { lang } = useContext(LanguageContext);
 
   return (
@@ -16,9 +17,11 @@ export default function HomePage() {
         <h1 className="text-3xl font-bold mb-4">
           {translations[lang].title}
         </h1>
+
         <p className="text-lg text-gray-700 mb-6">
           {translations[lang].memoir}
         </p>
+
         <Link
           href="/register"
           className="bg-gray-900 text-white px-6 py-3 rounded-2xl text-lg hover:bg-gray-800"
@@ -29,32 +32,73 @@ export default function HomePage() {
 
       {/* Info Cards */}
       <section className="mt-16 grid md:grid-cols-3 gap-6">
-        <div className="border rounded-2xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold">{translations[lang].about}</h2>
+
+        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+          <h2 className="text-lg font-semibold">
+            {translations[lang].about}
+          </h2>
+
           <p className="text-sm mt-2">
-            {lang==='en'
+            {lang === 'en'
               ? "Annual scholarship for classes 10th and 12th."
               : "कक्षा 10वीं एवं 12वीं के मेधावी छात्रों के लिए वार्षिक छात्रवृति।"}
           </p>
+
+          <Link
+            href="/about"
+            className="text-xs opacity-70 mt-4 inline-block hover:underline"
+          >
+            {lang === 'en'
+              ? "Read More"
+              : "अधिक पढ़ें"}
+          </Link>
         </div>
 
-        <div className="border rounded-2xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold">{translations[lang].process}</h2>
+        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+
+  <h2 className="text-lg font-semibold">
+    {translations[lang].process}
+  </h2>
+
+  <p className="text-sm mt-2">
+    {lang === 'en'
+      ? "Merit-based transparent selection."
+      : "मेरिट आधारित पारदर्शी चयन प्रक्रिया।"}
+  </p>
+
+  <Link
+    href="/selection"
+    className="text-xs opacity-70 mt-4 inline-block hover:underline"
+  >
+    {lang === 'en'
+      ? "Read More"
+      : "अधिक पढ़ें"}
+  </Link>
+
+</div>
+
+
+        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+          <h2 className="text-lg font-semibold">
+            {translations[lang].events}
+          </h2>
+
           <p className="text-sm mt-2">
-            {lang==='en'
-              ? "Merit-based transparent selection."
-              : "मेरिट आधारित पारदर्शी चयन प्रक्रिया।"}
+            {lang === 'en'
+              ? "Last city: Indore – 2025."
+              : "नवीनतम आयोजन: इंदौर – 2025।"}
           </p>
+
+          <Link
+            href="/events"
+            className="text-xs opacity-70 mt-4 inline-block hover:underline"
+          >
+            {lang === 'en'
+              ? "View Gallery"
+              : "गैलरी देखें"}
+          </Link>
         </div>
 
-        <div className="border rounded-2xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold">{translations[lang].events}</h2>
-          <p className="text-sm mt-2">
-            {lang==='en'
-              ? "Last event held in Bhopal - 2025."
-              : "नवीनतम आयोजन: भोपाल - 2025।"}
-          </p>
-        </div>
       </section>
 
     </div>
