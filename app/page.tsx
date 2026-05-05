@@ -15,24 +15,40 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto">
 
         {/* Hero Section */}
-        <section className="mt-10 text-center bg-white p-10 rounded-2xl shadow-md">
-          <h1 className="text-3xl font-bold mb-4 text-gray-900">
-            {translations[lang].title}
-          </h1>
+        <section className="mt-10 relative rounded-2xl overflow-hidden shadow-lg">
 
-          <p className="text-lg text-gray-700 mb-6">
-            {translations[lang].memoir}
-          </p>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/bg.jpg')" }}
+  ></div>
 
-          <a
-            href="https://forms.gle/YOUR_FORM_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-2xl text-lg hover:bg-gray-800"
-          >
-            {translations[lang].apply}
-          </a>
-        </section>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <div className="relative z-10 text-center p-10 md:p-16 text-white">
+
+    <h1 className="text-3xl md:text-5xl font-bold mb-4">
+      {translations[lang].title}
+    </h1>
+
+    <p className="text-lg md:text-xl mb-6 opacity-90">
+      {translations[lang].memoir}
+    </p>
+
+    <a
+      href="https://forms.gle/YOUR_FORM_LINK"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white text-black px-6 py-3 rounded-2xl text-lg font-medium hover:bg-gray-200 transition"
+    >
+      {translations[lang].apply}
+    </a>
+
+  </div>
+
+</section>
 
         {/* Info Cards */}
         <section className="mt-16 grid md:grid-cols-3 gap-6">
