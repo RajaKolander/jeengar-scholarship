@@ -38,7 +38,7 @@ export default function HomePage() {
     </p>
 
     <a
-      href="https://forms.gle/YOUR_FORM_LINK"
+      href="https://forms.gle/Jg4zLiL29EGG2cnE9"
       target="_blank"
       rel="noopener noreferrer"
       className="bg-white text-black px-6 py-3 rounded-2xl text-lg font-medium hover:bg-gray-200 transition"
