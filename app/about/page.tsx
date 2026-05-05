@@ -2,63 +2,26 @@
 
 import { useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
-import { programInfo } from '../data/program';
 
 export default function AboutPage() {
 
   const { lang } = useContext(LanguageContext);
 
   return (
-    <div className="p-10 max-w-5xl mx-auto bg-gray-50 rounded-2xl shadow-sm mt-10">
+    <div className="bg-gray-100 min-h-screen p-6">
+      <div className="max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow">
 
-      <h1 className="text-3xl font-bold mb-10 text-center">
-        {programInfo[lang].heading}
-      </h1>
+        <h1 className="text-2xl font-bold mb-6">
+          {lang === 'en' ? "About Program" : "कार्यक्रम विवरण"}
+        </h1>
 
-      {/* Program Description Section */}
-      <section className="mb-16">
+        <p className="text-gray-700 leading-relaxed">
+          {lang === 'en'
+            ? "The Jeengar Scholarship Program has been conducted annually since 2012 to support meritorious students of classes 10th and 12th. It aims to promote higher education and recognize academic excellence within the community."
+            : "जीनगर छात्रवृति कार्यक्रम 2012 से निरंतर आयोजित किया जा रहा है, जिसका उद्देश्य कक्षा 10वीं एवं 12वीं के मेधावी छात्रों को प्रोत्साहित करना और उच्च शिक्षा को बढ़ावा देना है।"}
+        </p>
 
-        <h2 className="text-2xl font-semibold mb-6">
-          {lang === 'en' ? "Program Description" : "कार्यक्रम विवरण"}
-        </h2>
-
-        <div className="grid gap-4">
-
-          {programInfo[lang].description.map((text, i) => (
-            <div key={i}
-              className="bg-white border rounded-2xl p-6">
-              <p className="text-sm leading-relaxed">
-                {text}
-              </p>
-            </div>
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* History Section */}
-      <section>
-
-        <h2 className="text-2xl font-semibold mb-6">
-          {lang === 'en' ? "Program History" : "कार्यक्रम का इतिहास"}
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-
-          {programInfo[lang].history.map((text, i) => (
-            <div key={i}
-              className="bg-white border rounded-2xl p-6">
-              <p className="text-sm leading-relaxed">
-                {text}
-              </p>
-            </div>
-          ))}
-
-        </div>
-
-      </section>
-
+      </div>
     </div>
   );
 }

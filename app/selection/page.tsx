@@ -2,32 +2,38 @@
 
 import { useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
-import { programInfo } from '../data/program';
 
 export default function SelectionPage() {
 
   const { lang } = useContext(LanguageContext);
 
   return (
-    <div className="p-10 max-w-5xl mx-auto mt-10 bg-gray-50 rounded-2xl shadow-sm">
+    <div className="bg-gray-100 min-h-screen p-6">
+      <div className="max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow">
 
-      <h1 className="text-3xl font-bold mb-10 text-center">
-        {programInfo[lang].selection.heading}
-      </h1>
+        <h1 className="text-2xl font-bold mb-6">
+          {lang === 'en' ? "Selection Process" : "चयन प्रक्रिया"}
+        </h1>
 
-      <div className="grid gap-4 md:grid-cols-2">
-
-        {programInfo[lang].selection.content.map((text, i) => (
-          <div key={i}
-            className="bg-white border rounded-2xl p-6 shadow-sm">
-            <p className="text-sm leading-relaxed">
-              {text}
-            </p>
-          </div>
-        ))}
+        <ul className="list-disc pl-5 text-gray-700 space-y-2">
+          <li>
+            {lang === 'en'
+              ? "Only students of classes 10th and 12th are eligible."
+              : "केवल कक्षा 10वीं एवं 12वीं के छात्र पात्र हैं।"}
+          </li>
+          <li>
+            {lang === 'en'
+              ? "Selection is based purely on academic merit."
+              : "चयन पूर्णतः शैक्षणिक मेरिट के आधार पर होता है।"}
+          </li>
+          <li>
+            {lang === 'en'
+              ? "Documents are verified by the committee."
+              : "दस्तावेजों की जांच समिति द्वारा की जाती है।"}
+          </li>
+        </ul>
 
       </div>
-
     </div>
   );
 }
