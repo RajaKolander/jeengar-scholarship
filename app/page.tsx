@@ -10,30 +10,32 @@ export default function HomePage() {
   const { lang } = useContext(LanguageContext);
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="bg-gray-100 min-h-screen p-6 max-w-6xl mx-auto">
 
       {/* Hero Section */}
-      <section className="mt-10 text-center bg-gray-50 p-10 rounded-2xl shadow-md">
-        <h1 className="text-3xl font-bold mb-4">
-          {translations[lang].title}
-        </h1>
+      <section className="mt-10 text-center bg-white p-10 rounded-2xl shadow-md">
+  <h1 className="text-3xl font-bold mb-4 text-gray-900">
+    {translations[lang].title}
+  </h1>
 
-        <p className="text-lg text-gray-700 mb-6">
-          {translations[lang].memoir}
-        </p>
+  <p className="text-lg text-gray-800 mb-6">
+    {translations[lang].memoir}
+  </p>
 
-        <Link
-          href="/register"
-          className="bg-gray-900 text-white px-6 py-3 rounded-2xl text-lg hover:bg-gray-800"
-        >
-          {translations[lang].apply}
-        </Link>
-      </section>
+  <a
+    href="https://forms.gle/YOUR_FORM_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-black text-white px-6 py-3 rounded-2xl text-lg hover:bg-gray-800"
+  >
+    {translations[lang].apply}
+  </a>
+</section>
 
       {/* Info Cards */}
       <section className="mt-16 grid md:grid-cols-3 gap-6">
 
-        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+        <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
           <h2 className="text-lg font-semibold">
             {translations[lang].about}
           </h2>
@@ -54,7 +56,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+        <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
 
   <h2 className="text-lg font-semibold">
     {translations[lang].process}
@@ -78,7 +80,7 @@ export default function HomePage() {
 </div>
 
 
-        <div className="border rounded-2xl p-6 shadow-sm bg-gray-50">
+        <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
           <h2 className="text-lg font-semibold">
             {translations[lang].events}
           </h2>
