@@ -22,7 +22,7 @@ export default function Register() {
       </p>
 
       <a
-        href="https://forms.gle/YOUR_FORM_LINK"
+        href="https://forms.gle/rqxK3vYu2TQxCQJMA"
         className="bg-black text-white px-6 py-3 rounded-2xl"
       >
         {translations[lang].apply}
