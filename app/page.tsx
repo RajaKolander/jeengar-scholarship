@@ -19,7 +19,7 @@ export default function HomePage() {
 
   {/* Background Image */}
   <div
-    className="absolute inset-0 bg-cover bg-center"
+    className="absolute inset-0 bg-cover bg-[center_25%] md:bg-[center_40%]"
     style={{ backgroundImage: "url('/bg.jpg')" }}
   ></div>
 
