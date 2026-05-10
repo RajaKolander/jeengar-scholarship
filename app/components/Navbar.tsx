@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* Left: Title */}
         <Link href="/" className="flex flex-col">
 
-          <span className="font-bold text-lg md:text-xl text-gray-900 leading-tight">
+          <span className="font-bold text-sm md:text-xl text-gray-900 leading-tight">
             {translations[lang].title}
           </span>
 
