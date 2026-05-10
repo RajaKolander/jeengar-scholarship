@@ -29,7 +29,7 @@ export default function Navbar() {
         </Link>
 
         {/* Center: Navigation */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm font-medium text-gray-700">
 
           <Link
             href="/"
