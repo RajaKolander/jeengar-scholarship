@@ -17,8 +17,8 @@ export default function EventsPage() {
 
         <p className="text-gray-700">
           {lang === 'en'
-            ? "The scholarship program has been conducted in multiple cities since 2012. The latest event was held in Indore in 2025."
-            : "यह कार्यक्रम 2012 से विभिन्न शहरों में आयोजित किया जा रहा है। नवीनतम आयोजन 2025 में इंदौर में हुआ।"}
+            ? "The scholarship program has been conducted in multiple cities since 2009. The latest event was held in Bhopal in 2025."
+            : "यह कार्यक्रम 2009 से विभिन्न शहरों में आयोजित किया जा रहा है। नवीनतम आयोजन 2025 में भोपाल में हुआ।"}
         </p>
 
       </div>

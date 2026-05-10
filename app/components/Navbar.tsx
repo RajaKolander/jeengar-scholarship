@@ -23,7 +23,7 @@ export default function Navbar() {
           </span>
 
           <span className="text-xs text-gray-500">
-            Since 2012
+            Since 2009
           </span>
 
         </Link>

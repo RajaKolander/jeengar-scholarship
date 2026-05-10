@@ -59,10 +59,20 @@ export default function ContactPage() {
                 <p>{lang === 'en' ? "Mobile Number:" : "मोबाइल नंबर:"} 9416499520</p>
               </div>
 
+
+              <div>
+                <p className="font-semibold">
+                  {lang === 'en' ? "Patron:" : "संरक्षक:"}
+                </p>
+                <p>Sampat Lal Panwar</p>
+                <p>{lang === 'en' ? "City:" : "शहर:"} Jaipur</p>
+                <p>{lang === 'en' ? "Mobile Number:" : "मोबाइल नंबर:"} 9414115790</p>
+              </div>
+
               {/* Coordinator */}
               <div>
                 <p className="font-semibold">
-                  {lang === 'en' ? "Coordinator:" : "संयोजक:"}
+                  {lang === 'en' ? "National Coordinator:" : "राष्ट्रीय संयोजक:"}
                 </p>
                 <p>Surender Nirvan (AGM, BSNL)</p>
                 <p>{lang === 'en' ? "City:" : "शहर:"} Shimla</p>

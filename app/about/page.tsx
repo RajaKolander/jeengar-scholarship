@@ -17,8 +17,8 @@ export default function AboutPage() {
 
         <p className="text-gray-700 leading-relaxed">
           {lang === 'en'
-            ? "The Jeengar Scholarship Program has been conducted annually since 2012 to support meritorious students of classes 10th and 12th. It aims to promote higher education and recognize academic excellence within the community."
-            : "जीनगर छात्रवृति कार्यक्रम 2012 से निरंतर आयोजित किया जा रहा है, जिसका उद्देश्य कक्षा 10वीं एवं 12वीं के मेधावी छात्रों को प्रोत्साहित करना और उच्च शिक्षा को बढ़ावा देना है।"}
+            ? "The Jeengar Scholarship Program has been conducted annually since 2009 to support meritorious students of classes 10th and 12th. It aims to promote higher education and recognize academic excellence within the community."
+            : "जीनगर छात्रवृति कार्यक्रम 2009 से निरंतर आयोजित किया जा रहा है, जिसका उद्देश्य कक्षा 10वीं एवं 12वीं के मेधावी छात्रों को प्रोत्साहित करना और उच्च शिक्षा को बढ़ावा देना है।"}
         </p>
 
       </div>
