@@ -1,121 +1,208 @@
 'use client';
 
 import { useContext } from 'react';
+import Link from 'next/link';
 import { LanguageContext } from './LanguageContext';
 import { translations } from './i18n';
-import Link from 'next/link';
 
 export default function HomePage() {
 
   const { lang } = useContext(LanguageContext);
 
   return (
-    <div className="bg-gray-100 min-h-screen p-6">
 
-      <div className="max-w-6xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 pb-16">
 
-        {/* Hero Section */}
-        <section className="mt-10 relative rounded-2xl overflow-hidden shadow-lg">
+      {/* NOTICE BAR */}
+      <section className="mt-6">
 
-  {/* Background Image */}
-  <div
-    className="absolute inset-0 bg-cover bg-[center_25%] md:bg-[center_40%]"
-    style={{ backgroundImage: "url('/bg.jpg')" }}
-  ></div>
+        <div className="bg-neutral-800/90 backdrop-blur-md text-gray-100 rounded-3xl px-6 py-5 shadow-xl border border-white/10">
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50"></div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
-  {/* Content */}
-  <div className="relative z-10 text-center p-10 md:p-16 text-white">
+            {/* Left */}
+            <div>
 
-    <h1 className="text-3xl md:text-5xl font-bold mb-4">
-      {translations[lang].title}
-    </h1>
+              <p className="text-xs uppercase tracking-[3px] opacity-70">
+                Important Notice
+              </p>
 
-    <p className="text-lg md:text-xl mb-6 opacity-90">
-      {translations[lang].memoir}
-    </p>
+              <h2 className="text-xl md:text-3xl font-bold mt-2 leading-tight">
+                {lang === 'en'
+                  ? 'Scholarship applications for 2026 are now open.'
+                  : 'वर्ष 2026 हेतु छात्रवृत्ति आवेदन प्रारंभ हो चुके हैं।'}
+              </h2>
 
-    <a
-      href="https://forms.gle/Jg4zLiL29EGG2cnE9"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white text-black px-6 py-3 rounded-2xl text-lg font-medium hover:bg-gray-200 transition"
-    >
-      {translations[lang].apply}
-    </a>
+            </div>
 
-  </div>
+            {/* Right */}
+            <div className="md:text-right">
 
-</section>
+              <p className="text-sm opacity-70">
+                {lang === 'en'
+                  ? 'Last Date'
+                  : 'अंतिम तिथि'}
+              </p>
 
-        {/* Info Cards */}
-        <section className="mt-16 grid md:grid-cols-3 gap-6">
+              <p className="text-2xl md:text-4xl font-bold mt-1">
+                15 July 2026
+              </p>
 
-          {/* About Program */}
-          <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
-            <h2 className="text-lg font-semibold text-gray-900">
-              {translations[lang].about}
-            </h2>
+            </div>
 
-            <p className="text-sm mt-2 text-gray-700">
-              {lang === 'en'
-                ? "Annual scholarship for classes 10th and 12th."
-                : "कक्षा 10वीं एवं 12वीं के मेधावी छात्रों के लिए वार्षिक छात्रवृति।"}
-            </p>
-
-            <Link
-              href="/about"
-              className="text-sm text-black mt-4 inline-block hover:underline"
-            >
-              {lang === 'en' ? "Read More" : "अधिक पढ़ें"}
-            </Link>
           </div>
 
-          {/* Selection Process */}
-          <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
-            <h2 className="text-lg font-semibold text-gray-900">
-              {translations[lang].process}
-            </h2>
+        </div>
 
-            <p className="text-sm mt-2 text-gray-700">
-              {lang === 'en'
-                ? "Merit-based transparent selection."
-                : "मेरिट आधारित पारदर्शी चयन प्रक्रिया।"}
-            </p>
+      </section>
 
-            <Link
-              href="/selection"
-              className="text-sm text-black mt-4 inline-block hover:underline"
+      {/* HERO SECTION */}
+      <section
+        className="relative overflow-hidden rounded-[40px] mt-8 min-h-[650px] flex items-center shadow-2xl"
+        style={{
+          backgroundImage: "url('/hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 35%',
+        }}
+      >
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/45"></div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-3xl px-8 md:px-16 py-20 text-white">
+
+          <p className="uppercase tracking-[4px] text-sm opacity-80 mb-5">
+
+            {lang === 'en'
+              ? 'Empowering Students, Building Futures'
+              : 'विद्यार्थियों को सशक्त बनाना, भविष्य का निर्माण'}
+
+          </p>
+
+          <h1 className="text-4xl md:text-7xl font-bold leading-tight">
+
+            {lang === 'en'
+              ? 'Jeengar Scholarship Program'
+              : 'जीनगर छात्रवृत्ति कार्यक्रम'}
+
+          </h1>
+
+          <p className="mt-8 text-lg md:text-2xl leading-relaxed text-gray-200">
+
+            {lang === 'en'
+              ? 'Supporting meritorious students through education, opportunity and community support since 2009.'
+              : '2009 से मेधावी विद्यार्थियों को शिक्षा, अवसर और सामाजिक सहयोग के माध्यम से आगे बढ़ाने का प्रयास।'}
+
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 mt-10">
+
+            <a
+              href="https://forms.gle/YOUR_FORM_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition"
             >
-              {lang === 'en' ? "Read More" : "अधिक पढ़ें"}
-            </Link>
-          </div>
-
-          {/* Events */}
-          <div className="border rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition">
-            <h2 className="text-lg font-semibold text-gray-900">
-              {translations[lang].events}
-            </h2>
-
-            <p className="text-sm mt-2 text-gray-700">
               {lang === 'en'
-                ? "Last city: Indore – 2025."
-                : "नवीनतम आयोजन: इंदौर – 2025।"}
-            </p>
+                ? 'Apply Now'
+                : 'आवेदन करें'}
+            </a>
 
             <Link
               href="/events"
-              className="text-sm text-black mt-4 inline-block hover:underline"
+              className="border border-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-black transition"
             >
-              {lang === 'en' ? "View Gallery" : "गैलरी देखें"}
+              {lang === 'en'
+                ? 'Past Events'
+                : 'पिछले आयोजन'}
             </Link>
+
           </div>
 
-        </section>
+        </div>
 
-      </div>
+      </section>
+
+      {/* INFO CARDS */}
+      <section className="mt-20 grid md:grid-cols-3 gap-8">
+
+        {/* ABOUT */}
+        <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            {translations[lang].about}
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            {lang === 'en'
+              ? 'Annual scholarship initiative supporting deserving students from economically weaker backgrounds.'
+              : 'आर्थिक रूप से कमजोर मेधावी विद्यार्थियों को प्रोत्साहित करने हेतु वार्षिक छात्रवृत्ति पहल।'}
+          </p>
+
+          <Link
+            href="/about"
+            className="inline-block mt-6 text-black font-semibold hover:underline"
+          >
+            {lang === 'en'
+              ? 'Read More →'
+              : 'और पढ़ें →'}
+          </Link>
+
+        </div>
+
+        {/* SELECTION */}
+        <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            {translations[lang].process}
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            {lang === 'en'
+              ? 'Transparent merit-based selection process with defined eligibility criteria.'
+              : 'पारदर्शी मेरिट आधारित चयन प्रक्रिया एवं स्पष्ट पात्रता मानदंड।'}
+          </p>
+
+          <Link
+            href="/selection"
+            className="inline-block mt-6 text-black font-semibold hover:underline"
+          >
+            {lang === 'en'
+              ? 'Read More →'
+              : 'और पढ़ें →'}
+          </Link>
+
+        </div>
+
+        {/* EVENTS */}
+        <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            {translations[lang].events}
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            {lang === 'en'
+              ? 'Explore reports, memories and highlights from scholarship events conducted across India.'
+              : 'देशभर में आयोजित छात्रवृत्ति कार्यक्रमों की झलकियाँ, रिपोर्ट एवं स्मृतियाँ देखें।'}
+          </p>
+
+          <Link
+            href="/events"
+            className="inline-block mt-6 text-black font-semibold hover:underline"
+          >
+            {lang === 'en'
+              ? 'View Events →'
+              : 'आयोजन देखें →'}
+          </Link>
+
+        </div>
+
+      </section>
+
     </div>
+
   );
 }
