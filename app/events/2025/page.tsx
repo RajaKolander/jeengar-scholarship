@@ -112,6 +112,18 @@ export default function Event2025Page() {
                   : 'श्री अजय पंवार, प्रधान, जीनगर समाज भोपाल'}
               </p>
 
+              <p className="text-gray-700 leading-relaxed">
+                {lang === 'en'
+                  ? 'Shri Bhagwan Das Dhalia, Event President, Bhopal'
+                  : 'श्री भगवानदास ढालिया, कार्यक्रम अध्यक्ष, भोपाल'}
+              </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                {lang === 'en'
+                  ? 'Shri Prithviraj Chauhan, Event Coordinator, Bhopal'
+                  : 'श्री पृथ्वीराज चौहान, कार्यक्रम संयोजन, भोपाल'}
+              </p>
+
             </div>
 
             <div className="border rounded-2xl p-6">
