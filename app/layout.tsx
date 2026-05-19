@@ -4,6 +4,7 @@ import './globals.css';
 import { useState, useEffect } from 'react';
 import { LanguageContext } from './LanguageContext';
 import Navbar from './components/Navbar';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Page content */}
           <main>{children}</main>
-
+          <Analytics />
         </body>
       </html>
     </LanguageContext.Provider>
