@@ -4,6 +4,7 @@ import './globals.css';
 import { useState, useEffect } from 'react';
 import { LanguageContext } from './LanguageContext';
 import Navbar from './components/Navbar';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* Page content */}
           <main>{children}</main>
 
+          <SpeedInsights />
         </body>
       </html>
     </LanguageContext.Provider>
