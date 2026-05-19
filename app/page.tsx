@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import Link from 'next/link';
 import { LanguageContext } from './LanguageContext';
 import { translations } from './i18n';
+import { Analytics } from "@vercel/analytics/next"
 
 export default function HomePage() {
 
