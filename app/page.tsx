@@ -46,7 +46,9 @@ export default function HomePage() {
               </p>
 
               <p className="text-2xl md:text-4xl font-bold mt-1">
-                15 July 2026
+                {lang === 'en'
+                  ? '15 August 2026.'
+                  : '15 अगस्त 2026'}
               </p>
 
             </div>

@@ -45,8 +45,8 @@ export default function SelectionPage() {
 
             <p>
               {lang === 'en'
-                ? '• Student should be from class 10th or 12th.'
-                : '• छात्र कक्षा 10वीं या 12वीं का होना चाहिए।'}
+                ? '• The student must have passed Class 10/12 with a minimum of 70%.'
+                : '• छात्र कक्षा 10th/ 12th में न्यूनतम 70% से पास होना चाहिए'}
             </p>
 
             <p>
