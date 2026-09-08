@@ -114,8 +114,8 @@ export default function HomePage() {
 
                         <p className="text-sm text-gray-400">
                             {lang === 'en'
-                                ? 'Scholarship applications for 2026 are now open.'
-                                : 'वर्ष 2026 हेतु छात्रवृत्ति आवेदन प्रारंभ हो चुके हैं।'}
+                                ? 'Applications for the 2026 scholarship program are now closed'
+                                : 'वर्ष 2026 हेतु छात्रवृत्ति आवेदन अब बंद हो चुके हैं।'}
                         </p>
 
                         <p className="text-sm md:text-right">
