@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useContext } from 'react';
 import Link from 'next/link';
@@ -6,21 +6,17 @@ import { LanguageContext } from './LanguageContext';
 import { translations } from './i18n';
 
 export default function HomePage() {
-
     const { lang } = useContext(LanguageContext);
 
     return (
-
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-16">
 
             {/* IMPORTANT NOTICES */}
             <section className="mt-6">
-
                 <div className="bg-neutral-800/90 backdrop-blur-md text-gray-100 rounded-3xl px-6 md:px-8 py-6 shadow-xl border border-white/10">
 
                     {/* Notice Header */}
                     <div className="mb-6">
-
                         <p className="text-xs uppercase tracking-[3px] opacity-60">
                             {lang === 'en'
                                 ? 'Important Notices'
@@ -38,12 +34,10 @@ export default function HomePage() {
                                 ? 'The official lists of candidates selected for the 2026–27 scholarship programme are now available.'
                                 : 'वर्ष 2026–27 छात्रवृत्ति कार्यक्रम हेतु चयनित विद्यार्थियों की आधिकारिक सूचियाँ अब उपलब्ध हैं।'}
                         </p>
-
                     </div>
 
-
                     {/* Selection List Buttons */}
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-3 gap-4">
 
                         {/* Class 10 */}
                         <a
@@ -52,9 +46,7 @@ export default function HomePage() {
                             rel="noopener noreferrer"
                             className="group bg-white text-black rounded-2xl px-5 py-4 flex items-center justify-between hover:bg-gray-200 transition shadow-md"
                         >
-
                             <div>
-
                                 <p className="text-xs uppercase tracking-[2px] text-gray-500">
                                     {lang === 'en'
                                         ? 'Scholarship List'
@@ -66,15 +58,12 @@ export default function HomePage() {
                                         ? 'Class 10 Candidates'
                                         : 'कक्षा 10 विद्यार्थी'}
                                 </p>
-
                             </div>
 
                             <span className="text-xl group-hover:translate-x-1 transition">
-                                →
+                                &gt;
                             </span>
-
                         </a>
-
 
                         {/* Class 12 */}
                         <a
@@ -83,9 +72,7 @@ export default function HomePage() {
                             rel="noopener noreferrer"
                             className="group bg-white text-black rounded-2xl px-5 py-4 flex items-center justify-between hover:bg-gray-200 transition shadow-md"
                         >
-
                             <div>
-
                                 <p className="text-xs uppercase tracking-[2px] text-gray-500">
                                     {lang === 'en'
                                         ? 'Scholarship List'
@@ -97,17 +84,40 @@ export default function HomePage() {
                                         ? 'Class 12 Candidates'
                                         : 'कक्षा 12 विद्यार्थी'}
                                 </p>
-
                             </div>
 
                             <span className="text-xl group-hover:translate-x-1 transition">
-                                →
+                                &gt;
                             </span>
+                        </a>
 
+                        {/* Bhamashah */}
+                        <a
+                            href="/bhamashah-list-2026.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group bg-white text-black rounded-2xl px-5 py-4 flex items-center justify-between hover:bg-gray-200 transition shadow-md"
+                        >
+                            <div>
+                                <p className="text-xs uppercase tracking-[2px] text-gray-500">
+                                    {lang === 'en'
+                                        ? 'Scholarship List'
+                                        : 'छात्रवृत्ति सूची'}
+                                </p>
+
+                                <p className="font-semibold text-lg mt-1">
+                                    {lang === 'en'
+                                        ? 'Bhamashah List'
+                                        : 'भामाशाह सूची'}
+                                </p>
+                            </div>
+
+                            <span className="text-xl group-hover:translate-x-1 transition">
+                                &gt;
+                            </span>
                         </a>
 
                     </div>
-
 
                     {/* Application Deadline */}
                     <div className="mt-6 pt-5 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -131,13 +141,10 @@ export default function HomePage() {
                                     : '15 अगस्त 2026'}
                             </span>
                         </p>
-
                     </div>
 
                 </div>
-
             </section>
-
 
             {/* HERO SECTION */}
             <section
@@ -149,37 +156,28 @@ export default function HomePage() {
                 }}
             >
 
-                {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/45"></div>
 
-                {/* Content */}
                 <div className="relative z-10 max-w-3xl px-8 md:px-16 py-20 text-white">
 
                     <p className="uppercase tracking-[4px] text-sm opacity-80 mb-5">
-
                         {lang === 'en'
                             ? 'Empowering Students, Building Futures'
                             : 'विद्यार्थियों को सशक्त बनाना, भविष्य का निर्माण'}
-
                     </p>
 
                     <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-
                         {lang === 'en'
                             ? 'Jeengar Scholarship Program'
                             : 'जीनगर छात्रवृत्ति कार्यक्रम'}
-
                     </h1>
 
                     <p className="mt-8 text-lg md:text-2xl leading-relaxed text-gray-200">
-
                         {lang === 'en'
                             ? 'Supporting meritorious students through education, opportunity and community support since 2009.'
                             : '2009 से मेधावी विद्यार्थियों को शिक्षा, अवसर और सामाजिक सहयोग के माध्यम से आगे बढ़ाने का प्रयास।'}
-
                     </p>
 
-                    {/* Buttons */}
                     <div className="flex flex-wrap gap-4 mt-10">
 
                         <a
@@ -205,16 +203,13 @@ export default function HomePage() {
                     </div>
 
                 </div>
-
             </section>
-
 
             {/* INFO CARDS */}
             <section className="mt-20 grid md:grid-cols-3 gap-8">
 
                 {/* ABOUT */}
                 <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
-
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         {translations[lang].about}
                     </h2>
@@ -230,16 +225,13 @@ export default function HomePage() {
                         className="inline-block mt-6 text-black font-semibold hover:underline"
                     >
                         {lang === 'en'
-                            ? 'Read More →'
-                            : 'और पढ़ें →'}
+                            ? 'Read More >'
+                            : 'और पढ़ें >'}
                     </Link>
-
                 </div>
-
 
                 {/* SELECTION */}
                 <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
-
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         {translations[lang].process}
                     </h2>
@@ -255,16 +247,13 @@ export default function HomePage() {
                         className="inline-block mt-6 text-black font-semibold hover:underline"
                     >
                         {lang === 'en'
-                            ? 'Read More →'
-                            : 'और पढ़ें →'}
+                            ? 'Read More >'
+                            : 'और पढ़ें >'}
                     </Link>
-
                 </div>
-
 
                 {/* EVENTS */}
                 <div className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition">
-
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         {translations[lang].events}
                     </h2>
@@ -280,15 +269,13 @@ export default function HomePage() {
                         className="inline-block mt-6 text-black font-semibold hover:underline"
                     >
                         {lang === 'en'
-                            ? 'View Events →'
-                            : 'आयोजन देखें →'}
+                            ? 'View Events >'
+                            : 'आयोजन देखें >'}
                     </Link>
-
                 </div>
 
             </section>
 
         </div>
-
     );
 }
